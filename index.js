@@ -1,4 +1,32 @@
 var cont = 1, inizia = false, timer = 0, img="", Coppie = 0, timer1 = 0;
+var imgVet = ["img/Cane.jpg", "img/Elefante.jpg", "img/Maiale.jpg", "img/Leone.jpg", "img/Pecora.jpg", "img/Mucca.jpg"];
+var numImg = [0,0,0,0,0,0]; //Per controllare se un immagine non viene generata per più di due volte
+
+function init()
+{
+    let num = 0;
+    let riga1 = document.querySelector("#riga1");
+    let riga2 = document.querySelector("#riga2");
+
+    //Genero immagini casuali per prima riga
+    generaRiga(riga1);
+
+    //Genero immagini casuali per seconda riga
+    generaRiga(riga2);
+}
+
+function generaRiga(riga)
+{
+    for(let i = 0; i < imgVet.length; i++)
+    {
+        num = Math.round(Math.random()*5);
+        while(numImg[num] == 2)
+            num = Math.round(Math.random()*5);
+        numImg[num]++;
+        console.log(numImg);
+        riga.innerHTML += `<img onclick = "controlloImg(event)" src="${imgVet[num]}">`;
+    }
+}
 
 function gioca()
 {
