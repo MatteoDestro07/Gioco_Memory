@@ -1,15 +1,23 @@
 img{
     width: 150px;
     height: 150px;
+    margin: 50px;
 }
 
 body,footer{
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     height: 100vh;
     margin: 0;
+}
+
+body,footer,section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header{
+    text-align: center;
 }
 
 h1{
@@ -23,13 +31,6 @@ button{
     font-size: 15pt;
 }
 
-div{
-    margin: 50px;
-}
-
 section{
-    display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
 }
