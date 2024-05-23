@@ -1,6 +1,15 @@
-img{
+img,div{
     width: 150px;
     height: 150px;
+}
+
+img{
+    opacity: 0;
+}
+
+div{
+    background-color: blue;
+    border-radius: 5px;
     margin: 50px;
 }
 
@@ -33,4 +42,24 @@ button{
 
 section{
     flex-direction: row;
+}
+
+.animazione{
+    animation-name: animazione;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes animazione{
+    0%{
+        opacity: 0%;
+    }
+
+    50%{
+        opacity: 100%;
+    }
+
+    100%{
+        opacity: 0%;
+    }
 }
